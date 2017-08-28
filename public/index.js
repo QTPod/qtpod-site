@@ -3,7 +3,7 @@ $(document).ready(function(){
     $("#navbar-search-button").click(function(){
         var searchQuery = $("#navbar-search-input")[0].value;
         
-        if(searchQuery != "")
+        if(searchQuery.trim() != "")
         {
             var url = "/search/" + searchQuery;
             window.location.href = url;
