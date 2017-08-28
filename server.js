@@ -9,12 +9,9 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("public"));
 
-// the uri for connecting to mongo
-// format: mongodb://user:password@host/database
-// var mongoUri = process.env.MONGO_URI || "mongodb://cs290_korsnest:gobeavers@classmongo.engr.oregonstate.edu/cs290_korsnest";
-var mongoUri = "mongodb://localhost/test"; // for connecting to a locally running mongodb instance
+// var mongoUri = process.env.MONGO_URI || "mongodb://user:password@host/database";
+var mongoUri = "mongodb://localhost/test";
 
-// connecting to the mongo database via mongoose
 mongoose.connect(mongoUri);
 
 const Schema = mongoose.Schema;
@@ -35,28 +32,7 @@ app.get("/", function(req, res)
 });
 
 app.get("/home", function(req, res)
-{
-    /*
-    var data = Pod.findOne({urlname: "thisamericanlife"}).exec(function(err, data)
-    {
-        if(err) return next(err);
-        data.episodes = ["episode 1", "episode 2", "episode 3", "episode 4", "episode 5", "episode 6", "episode 7", "episode 8", "episode 9", "episode 10"];
-        data.save(function(err){});
-    });
-    */
-    
-    /*
-    var newPod = new Pod({
-        name: "This American Life",
-        urlname: "thisamericanlife",
-        author: "This American Life",
-        url: "http://is5.mzstatic.com/image/thumb/Music71/v4/03/3c/f1/033cf19b-a70e-108f-2d77-82c5b8c8cde0/source/600x600bb.jpg",
-        episodes: ["test1", "test2", "test3", "test4", "test5", "test6"]
-    });
-    
-    newPod.save(function(err){});
-    */
-    
+{   
     Pod.find({}).exec(function(err, data)
     {
         if(err) return next(err);
