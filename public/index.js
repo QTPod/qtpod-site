@@ -2,8 +2,6 @@ $(document).ready(function(){
     
     $("#navbar-search-button").click(function(){
         var searchQuery = $("#navbar-search-input")[0].value;
-        //searchQuery = searchQuery ? searchQuery.trim().toLowerCase() : '';
-        //searchQuery = searchQuery.replace(/\s/g, '');
         
         if(searchQuery != "")
         {
@@ -17,9 +15,8 @@ $(document).ready(function(){
             $("#navbar-search-button").click();
     });
 
-    $("#play-button").click(function(){
-       alert("You clicked the play button");       
-        
+    $(".play-button").click(function(){
+        //play episode!
     });
     
 });
