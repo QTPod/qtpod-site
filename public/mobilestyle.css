@@ -1,0 +1,82 @@
+#navbar-search-input {
+    width: 130px;
+}
+
+.launcher {
+    padding: 0px 6%;
+}
+
+.launcher-title {
+    font-size: 3.6vw;
+}
+
+.launcher-message {
+    font-size: 3.6vw;
+}
+
+.launcher-image {
+    width: 70%;
+}
+
+/*
+.launcher-button {
+    margin-top: 10px;
+    padding: 2%;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+*/
+
+.view-all-button {
+    font-size: 4vw;
+    padding: 2%;
+}
+
+.main-container {
+    padding: 10px 15px;
+    width: 85%;
+}
+
+.podcast-container {
+    padding-top: 2%;
+    padding-left: 1%;
+    margin: 2% 0%;
+    border-radius: 0.8%;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.podcast {
+    margin: 0% 1% 1% 1%;
+    width: 25.8vw;
+}
+	
+.podcast-cover {
+    width: 25.8vw;
+    border: 0;
+}
+
+.podcast-name {
+    font-size: 3vw;
+}
+
+.podcast-author {
+    font-size: 2vw;
+}
+
+.episode-container {
+    width: 85%;
+}
+
+.episode-table {
+    width: 62%;
+}
+
+.episode-table td, th {
+    font-size: 3vw;
+}
+
+footer {
+    flex-wrap: wrap;
+    padding-left: 12%;
+}

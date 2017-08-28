@@ -1,0 +1,27 @@
+{{> header}}
+
+<div class="launcher">
+    <div class="launcher-title">
+        <h1>All your favorite podcasts, without ads.</h1>
+    </div>
+	
+    <img class="launcher-image" src="https://smartpodcastplayer.com/wp-content/uploads/2014/06/SPP-FeatureLayout-1.png">
+	
+    <div class="launcher-message">
+        <h3>QTPod is an easy-to-use podcast player which lets you listen to all your favorite podcasts without those annoying ads.</h3>
+    </div>
+</div>
+
+<main class="main-container">
+    <div class="podcast-container">
+        {{#each allPodcasts}}
+            {{> podcast}}
+        {{/each}}
+    </div>
+    
+    <a href="/podcasts/popular">
+        <button class="view-all-button"><span>See what's popular </span></button>
+    </a>
+</main>
+
+{{> footer}}

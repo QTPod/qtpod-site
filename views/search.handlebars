@@ -1,0 +1,11 @@
+{{> header}}
+
+<main class="main-container">
+    <h2>Search results for "{{searchquery}}"</h2>
+    
+    <div class="podcast-container">
+        {{#each allPodcasts}}
+            {{> podcast}}
+        {{/each}}
+    </div>
+</main>

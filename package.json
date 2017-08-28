@@ -1,0 +1,26 @@
+{
+  "name": "qtpod",
+  "version": "1.0.0",
+  "description": "Website for podcast adblocker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/QTPod/website.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/QTPod/qtpod-site/issues"
+  },
+  "homepage": "https://github.com/QTPod/qtpod-site#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.6"
+  },
+  "devDependencies": {}
+}
