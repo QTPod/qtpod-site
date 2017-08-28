@@ -75,9 +75,8 @@ app.get("/podcast/:id", function(req, res)
 app.get("/search/:id", function(req, res)
 {
     var search = req.params.id;
-    search = search ? search.toLowerCase() : '';
     decodeURI(search);
-    search = search.replace(/\s/g, '');
+    search = search.toLowerCase().replace(/\s/g, '');
 
     Pod.find({}).exec(function(err, data)
     {
