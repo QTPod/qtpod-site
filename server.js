@@ -1,6 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const app = express();
 
@@ -91,10 +91,10 @@ app.get("/search/:id", function(req, res)
                     tempData.push(data[i]);
             }
             
-            if(tempData.length == 0)
-                res.render("podnotfound", {searchquery: req.params.id});
-            else
+            if(tempData.length != 0)
                 res.render("search", {allPodcasts: tempData, searchquery: req.params.id});
+            else
+                res.render("search", {searchquery: req.params.id});
         }
     });
 });

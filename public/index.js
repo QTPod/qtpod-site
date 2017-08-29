@@ -14,9 +14,10 @@ $(document).ready(function(){
         if(e.which === 13)
             $("#navbar-search-button").click();
     });
-
+    
     $(".play-button").click(function(){
         //play episode!
+
     });
-    
+
 });

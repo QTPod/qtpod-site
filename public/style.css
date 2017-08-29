@@ -1,8 +1,7 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
-    background: #f2f2f2;
-    min-height: 100vh;
+    background: #eee;
 }
 
 button {
@@ -124,19 +123,6 @@ a:focus {
 .launcher-image {
     width: 40%;
 }
-/*
-.launcher-button {
-    padding: 15px;
-    border-radius: 4px;
-    background: #f4511e;
-    border: none;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 75px;
-}
-*/
 
 .main-container {
     padding: 10px 30px;
@@ -217,15 +203,31 @@ a:focus {
 
 .podcast-author {
     font-size: 14px;
-    color: #555;
+    color: #777;
 }
 
 /* EPISODES OF A PODCAST */
+.complete-podcast {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.single-podcast {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px 12px 5px 12px;
+    width: 240px;
+    background: #fff;
+}
+
 .episode-container {
     padding: 20px 12px;
     margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: -20px;
     width: 1000px;
     text-align: center;
     display: flex;
@@ -234,7 +236,7 @@ a:focus {
 
 .episode-table {
     border-collapse: collapse;
-    width: 790px;
+    width: 97.5%;
     margin-left: 12px;
 }
 
@@ -287,7 +289,6 @@ footer p {
     font-size: 14px;
     line-height: 20px;
     max-width: 500px;
-    min-width: 300px;
     margin-right: 50px;
     letter-spacing: -0.1px;
 }
