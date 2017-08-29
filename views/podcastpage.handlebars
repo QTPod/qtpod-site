@@ -1,21 +1,26 @@
 {{> header}}
 
-<div class="episode-container">
-    {{#each allPodcasts}}
-        {{> podcast}}
-    {{/each}}
-    
-    <table class="episode-table">
-        <tr>
-            <th>Name</th>
-            <th>Released</th>
-        </tr>
-        
-        {{#each allEpisodes}}
-            {{> episode}}
+<div class="complete-podcast">
+
+    <div class="single-podcast">
+        {{#each allPodcasts}}
+                {{> podcast}}
         {{/each}}
-    </table>
-    
+    </div>
+
+    <div class="episode-container">
+        <table class="episode-table">
+            <tr>
+                <th>Name</th>
+                <th>Released</th>
+            </tr>
+        
+            {{#each allEpisodes}}
+                {{> episode}}
+            {{/each}}
+        </table>
+    </div>
+
 </div>
 
 {{> footer}}

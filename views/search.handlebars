@@ -3,9 +3,16 @@
 <main class="main-container">
     <h2>Search results for "{{searchquery}}"</h2>
     
-    <div class="podcast-container">
-        {{#each allPodcasts}}
-            {{> podcast}}
-        {{/each}}
-    </div>
+    {{#if allPodcasts}}
+        <div class="podcast-container">
+            {{#each allPodcasts}}
+                {{> podcast}}
+            {{/each}}
+        </div>
+    
+    {{else}}
+        <h4>We couldn't find any podcasts that match your search.</h4>
+        
+    {{/if}}
+    
 </main>
