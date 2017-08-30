@@ -12,7 +12,7 @@
 }
 
 #navbar-search-input {
-    width: 130px;
+    width: 40vw;
 }
 
 .launcher {
@@ -34,47 +34,36 @@
 
 .view-all-button {
     font-size: 4vw;
-    margin: 5px 0px 10px 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     padding: 2%;
 }
 
 .main-container {
     margin-top: 15px;
-    padding: 0px;
-    width: 91%;
+    padding: 0;
+    width: 87vw;
 }
 
 .podcast-container {
-    padding-top: 2%;
-    padding-left: 1%;
-    flex-wrap: wrap;
+    padding: 0;
+    padding-top: 1%;
+    margin: 0;
     overflow: hidden;
     background: #fff;
 }
 
-.no-overflow {
-    flex-wrap: nowrap;
-    overflow: hidden;
-}
-
 .podcast {
-    margin: 0% 1% 1% 1%;
+    margin: 1%;
     width: 27vw;
-}
-	
-.asdf {
-    display: none;
 }
 
 .podcast-cover {
     width: 27vw;
+    border-width: 1px;
 }
 
-.podcast-name {
-    font-size: 3.5vw;
-}
-
-.podcast-author {
+.podcast-name, .podcast-author{
     font-size: 3vw;
 }
 

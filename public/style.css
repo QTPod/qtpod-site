@@ -102,7 +102,7 @@ a:focus {
 .launcher {
     margin-top: 0;
     display: inline-block;
-    padding: 10px 14%;
+    padding: 10px 10%;
     background: #ffe0cc;
     text-align: center;
 }
@@ -121,15 +121,15 @@ a:focus {
 }
 
 .launcher-image {
-    width: 40%;
+    width: 450px;
 }
 
 .main-container {
-    padding: 10px 30px;
+    padding: 8px 25px;
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
-    width: 965px;
+    width: 1060px;
     text-align: center;
     display: block;
     background: #fff;
@@ -176,24 +176,33 @@ a:focus {
 
 /* MULTIPLE PODCASTS */
 .podcast-container {
-    padding-top: 20px;
-    padding-left: 10px;
-    margin: 1% 0%;
-    border-radius: 0.8%;
+    padding: 6px;
+    margin: 6px;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     background: #eee;
 }
 
+.low-width {
+    max-width: 89vw;
+}
+
+.no-overflow {
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
 .podcast {
     display: block;
-    margin: 0px 10px 8px 10px;
-    width: 168px;
+    margin: 6px;
+    width: 160px;
     text-align: center;
 }
 
 .podcast-cover {
-    width: 168px;
+    width: 160px;
     border: solid 1px #ccc;
 }
 
@@ -209,6 +218,7 @@ a:focus {
 /* EPISODES OF A PODCAST */
 .complete-podcast {
     width: 1000px;
+    margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -218,15 +228,13 @@ a:focus {
 .single-podcast {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
-    padding: 20px 12px 5px 12px;
-    width: 240px;
+    padding: 14px;
+    width: 250px;
     background: #fff;
 }
 
 .episode-container {
-    padding: 20px 12px;
-    margin-top: 20px;
+    padding: 20px 0;
     margin-left: -20px;
     width: 1000px;
     text-align: center;
@@ -237,7 +245,6 @@ a:focus {
 .episode-table {
     border-collapse: collapse;
     width: 97.5%;
-    margin-left: 12px;
 }
 
 .episode-table td, th {
@@ -271,11 +278,12 @@ a:focus {
 /* FOOTER */
 footer {
     display: flex;
+    overflow: hidden;
     bottom: 0;
     left: 0;
     right: 0;
-    margin-top: 150px;
-    padding: 22px 0 0 17%;
+    margin-top: 160px;
+    padding: 22px 0 0 12%;
     background: #333;
     color: #fff;
 }
@@ -288,9 +296,9 @@ footer h1 {
 footer p {
     font-size: 14px;
     line-height: 20px;
-    max-width: 500px;
-    margin-right: 50px;
-    letter-spacing: -0.1px;
+    max-width: 700px;
+    min-width: 200px;
+    margin-right: 5%;
 }
 
 footer th {
@@ -300,7 +308,7 @@ footer th {
 }
 
 footer td {
-    width: 180px;
+    width: 150px;
 }
 
 footer a {
@@ -314,7 +322,13 @@ footer a:hover {
 .copyright {
     height: 80px;
 }
-
+/*
+@media screen and (min-width: 1400px) {
+    footer {
+        padding-left: 18%;
+    }
+}
+*/
 /* 404 PAGE */
 .error-container {
     margin-top: 50px;
