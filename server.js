@@ -39,7 +39,7 @@ app.get("/home", function(req, res)
         
         var tempData =
         {
-            allPodcasts: data.slice(0, 5)
+            allPodcasts: data.slice(0, 6)
         };
         res.render("home", tempData);
     });
