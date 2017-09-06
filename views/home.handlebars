@@ -1,27 +1,105 @@
 {{> header}}
 
-<div class="launcher">
-    <div class="launcher-title">
-        <h1>All your favorite podcasts, without ads.</h1>
-    </div>
-	
-    <img class="launcher-image" src="https://smartpodcastplayer.com/wp-content/uploads/2014/06/SPP-FeatureLayout-1.png">
-	
-    <div class="launcher-message">
-        <h3>QTPod is an easy-to-use podcast player which lets you listen to all your favorite podcasts without those annoying ads.</h3>
+<div id="home" class="container-fluid">    
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+            <h1>All your favorite</h1>
+            <h1>podcasts, without ads.</h1>
+            <p>QTPod is an easy-to-use podcast player which lets you listen to all your favorite podcasts without those annoying ads.</p>
+            <a href="/browse"><button class="view-all-button"><span>Get started </span></button></a>
+        </div>
     </div>
 </div>
 
-<main class="main-container low-width">
-    <div class="podcast-container no-overflow">
-        {{#each allPodcasts}}
-            {{> podcast}}
-        {{/each}}
+<div id="about" class="container-fluid text-center">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 class="text-center">ABOUT QTPOD</h1>
+            <h3>Pick any episode from our <a href="/browse" class="aboutlink">large assortment</a> of podcasts to listen to. QTPod will automatically skip over the ads as it plays!</h3>
+            <h3>QTPod is (currently) completely free to use. However, it would really help out if you could <a href="https://www.patreon.com/thenerdherd6254" class="aboutlink">donate</a> to us!</h3>
+        </div>
+    </div>
+    <div class="main-container low-margin-top">
+        <div class="podcast-container no-wrap">
+            {{#each allPodcasts}}
+                {{> podcast}}
+            {{/each}}
+        </div>
+        <a href="/browse"><button class="view-all-button" id="popular-button"><span>See what's popular </span></button></a>
+    </div>
+</div>
+
+<div class="container-fluid" id="contact">
+<div class="container">
+    <h1 class="text-center">Contact Us</h1><br>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Email address">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Subject">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <textarea class="form-control" rows="5" placeholder="Type your message here..."></textarea>
+                </div>
+            </div>
+    
+            <div class="row form-group">
+                <div class="col-md-11 text-center">
+                    <button type="submit" class="btn btn-default btn-lg" id="email-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="well well-sm pull-right">
+                <p>You can also shoot us an email at:</p>
+                <h4>hello@qtpod.io</h4>
+                <p>We look forward to hearing from you!</p>
+            </div>
+        </div>
     </div>
     
-    <a href="/podcasts/popular">
-        <button class="view-all-button"><span>See what's popular </span></button>
-    </a>
-</main>
+    <!--
+        <div class="col-md-9">
+            <div class="row form-group">
+                <label>Name</label>
+                <div class="col-md-5 input-group">
+                    <i class="fa fa-user input-group-addon"></i>
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <label>Email</label>
+                <div class="col-md-5 input-group">
+                    <i class="fa fa-envelope input-group-addon"></i>
+                    <input type="text" class="form-control" placeholder="Email address">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label>Subject</label>
+                <div class="col-md-11 input-group">
+                    <i class="fa fa-pencil input-group-addon"></i>
+                    <input type="text" class="form-control" placeholder="Subject">
+                </div>
+                <label>Message</label>
+                <div class="col-md-11 input-group">
+                    <i class="fa fa-comment input-group-addon"></i>
+                    <textarea class="form-control" rows="5" id="comment" placeholder="Type your message here..."></textarea>
+                </div>
+            </div>
+    -->
+    
+</div>
+</div>
 
 {{> footer}}

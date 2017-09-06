@@ -1,7 +1,7 @@
-{{> header}}
+{{> header2}}
 
 <main class="main-container">
-    <h2>Search results for "{{searchquery}}"</h2>
+    <h1 class="text-center">Search results for "{{searchquery}}"</h1>
     
     {{#if allPodcasts}}
         <div class="podcast-container">
@@ -11,7 +11,7 @@
         </div>
     
     {{else}}
-        <h4>We couldn't find any podcasts that match your search.</h4>
+        <h4 class="text-center">We couldn't find any podcasts that match your search.</h4>
         
     {{/if}}
     

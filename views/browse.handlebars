@@ -1,0 +1,14 @@
+{{> header2}}
+
+<div class="main-container">
+<h1>Browse {{sort}} podcasts</h1>
+
+<div class="podcast-container">
+    {{#each allPodcasts}}
+        {{> podcast}}
+    {{/each}}	
+</div>
+
+</div>
+
+{{> footer}}

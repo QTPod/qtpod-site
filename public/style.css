@@ -1,44 +1,28 @@
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     margin: 0;
     background: #eee;
 }
 
+::selection {
+  background: #aaa;
+}
+
+::-moz-selection {
+  background: #aaa;
+}
+
 button {
     outline: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* TITLE AND NAVBAR */
-.site-title {
-    margin: 0;
-    padding: 10px 20px;
-    font-size: 30px;
-    font-weight: normal;
-    color: #fff;
-    background: #444;
-}
-
-.navbar {
-    background: #fff;
-    font-size: 18px;
-    line-height: 22px;
-}
-
-.navlist {
-    margin: 0 0 0 20px;
-    padding: 0;
-}
-
-.navitem {
-    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #000;
 }
 
 a {
     color: #000;
+    text-decoration: none;
 }
 
 a:hover,
@@ -50,89 +34,107 @@ a:focus {
     outline: none;
 }
 
-.navlink a {
-    padding: 8px 10px;
-    display: inline-block;
+.navbar {
+    border-radius: 0;
+    background: #444;
+    border: none;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
-.navlink.active {
-    box-shadow: inset 0 -3px #319df6;
+#myNavbar a {
+    color: #fff;
 }
 
-.navbar-search {
-    float: right;
-    margin-right: 2%;
-    padding: 0;
-    line-height: 38px;
+#myNavbar a:hover {
+    background: #333;
+}
+
+#navbar-brand {
+    font-size: 27px;
+    padding-top: 12px;
+    color: #fff;
+}
+
+.navbar-nav {
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    background: #777;
 }
 
 #navbar-search-input {
-    padding: 4px;
     font-size: 16px;
-    background: #eee;
+    background: #dadada;
     border: 1px solid #dadada;
     border-radius: 2px;
 }
 
 #navbar-search-input:focus {
-    outline: none;
     background: #fff;
 }
 
-#navbar-search-button {
-    margin-left: -5px;
-    font-size: 16px;
-    background: none;
-    border: none;
-    color: #343434;
-    cursor: pointer;
-}
-
-#navbar-search-button:hover {
-    color: #319df6;
-}
-
-#navbar-search-button:focus {
-    color: #319df6;
-    outline: none;
-}
-
-
-/* HOME PAGE LAUNCHER */
-.launcher {
+/* HOMEPAGE */
+#home {
     margin-top: 0;
-    display: inline-block;
-    padding: 10px 10%;
-    background: #ffe0cc;
-    text-align: center;
+    color: #fff;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("landing-img.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.launcher-title {
-    font-size: 30px;
-    color: #222;
+#home .row {
+    margin-top: 15%;
 }
 
-.launcher-message {
-    vertical-align: center;
-    margin-top: -1%;
-    margin-bottom: 50px;
-    color: #4a4a4a;
-    font-size: 30px;
+#home h1 {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 80%;
+    margin-top: 0;
+    white-space: nowrap;
 }
 
-.launcher-image {
-    width: 450px;
+#home p {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-top: 0;
 }
 
-.main-container {
-    padding: 8px 25px;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 1060px;
-    text-align: center;
-    display: block;
-    background: #fff;
+#about {
+    background: #090909;
+    color: #fff;
+    padding-top: 5%;
+    padding-bottom: 9%;
+}
+
+#about h1 {
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 0;
+    letter-spacing: 0.8px;
+}
+
+#about a {
+    text-decoration: none;
+}
+
+.aboutlink {
+    text-decoration: none;
+    color: #319df6;
+}
+
+.aboutlink:hover {
+    color: #fff;
+}
+
+#contact {
+    padding: 60px 0 200px 0;
+    background: #eee;
 }
 
 /* VIEW ALL BUTTON */
@@ -140,13 +142,12 @@ a:focus {
     display: inline-block;
     border-radius: 4px;
     background: #f4511e;
-    border: none;
     color: #fff;
     text-align: center;
     font-size: 30px;
-    padding: 1.5%;
+    padding: 10px;
+    width: 200px;
     transition: all 0.5s;
-    cursor: pointer;
 }
 
 .view-all-button span {
@@ -161,7 +162,7 @@ a:focus {
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -20px;
+    right: -15px;
     transition: 0.5s;
 }
 
@@ -175,66 +176,115 @@ a:focus {
 }
 
 /* MULTIPLE PODCASTS */
-.podcast-container {
-    padding: 6px;
-    margin: 6px;
+.main-container {
+    display: block;
+    width: 68vw;
+    padding: 0.6% 1.2%;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
     border-radius: 5px;
+    background: #fff;
+}
+
+.main-container h1 {
+    margin: 5px 0 15px 0;
+}
+
+.low-margin-top {
+    margin-top: 1.5%;
+}
+
+.podcast-container {
     display: flex;
     flex-wrap: wrap;
-    background: #eee;
+    padding: 0.4vw;
+    padding-bottom: 0;
+    border-radius: 5px;
+    background: #e8e8e8;
 }
 
-.low-width {
-    max-width: 89vw;
-}
-
-.no-overflow {
-    max-width: 100%;
+.no-wrap {
     flex-wrap: nowrap;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .podcast {
-    display: block;
-    margin: 6px;
-    width: 160px;
-    text-align: center;
+    width: 10vw;
+    margin: 0.4vw;
 }
 
 .podcast-cover {
-    width: 160px;
-    border: solid 1px #ccc;
+    width: 10vw;
+    border: solid 1px #ddd;
 }
 
 .podcast-name {
-    font-size: 16px;
+    font-size: 120%;
+}
+
+.podcast a {
+    text-decoration: none;
 }
 
 .podcast-author {
-    font-size: 14px;
     color: #777;
+    font-size: 90%;
 }
 
-/* EPISODES OF A PODCAST */
+@media (max-width: 1000px) {
+    .podcast-name {
+        font-size: 90%;
+    }
+    
+    .podcast-author {
+        font-size: 70%;
+    }
+}
+
+#popular-button {
+    background: #319df6;
+    font-size: 26px;
+    margin-top: 1.2%;
+    padding: 6px;
+    width: 256px;
+}
+
+#popular-button:hover span {
+    padding-right: 20px;
+}
+
+.main-container h2 {
+    margin-top: 0;
+}
+
+/* SINGLE PODCAST */
 .complete-podcast {
-    width: 1000px;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
     display: flex;
     flex-wrap: nowrap;
+    width: 1000px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
 }
 
 .single-podcast {
     display: flex;
     flex-wrap: wrap;
-    padding: 14px;
+    text-align: center;
+    padding: 0.6vw;
     width: 250px;
     background: #fff;
 }
 
+.fixed-width {
+    width: 160px;
+}
+
 .episode-container {
-    padding: 20px 0;
+    padding: 1vw 0;
     margin-left: -20px;
     width: 1000px;
     text-align: center;
@@ -245,6 +295,7 @@ a:focus {
 .episode-table {
     border-collapse: collapse;
     width: 97.5%;
+    margin-left: 0.4vw;
 }
 
 .episode-table td, th {
@@ -258,6 +309,28 @@ a:focus {
     background: #eee;
 }
 
+.name-cell {
+    text-align: left;
+}
+
+.episode-description {
+    float: right;
+}
+
+.fa-info-circle {
+    font-size: 24px;
+    color: #888;
+    vertical-align: middle;
+}
+
+.fa-info-circle:hover {
+    color: #333;
+}
+
+.episode-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
 .release-date-cell {
     width: 1px;
 }
@@ -267,82 +340,158 @@ a:focus {
 }
 
 .play-button {
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
+    vertical-align: middle;
+    color: #000;
 }
 
 .play-button:hover {
     color: #2bff00;
 }
 
-/* FOOTER */
-footer {
-    display: flex;
-    overflow: hidden;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-top: 160px;
-    padding: 22px 0 0 12%;
-    background: #333;
-    color: #fff;
-}
-
-footer h1 {
-    font-size: 20px;
-    line-height: 0px;
-}
-
-footer p {
-    font-size: 14px;
-    line-height: 20px;
-    max-width: 700px;
-    min-width: 200px;
-    margin-right: 5%;
-}
-
-footer th {
-    border: none;
-    padding: 0;
-    font-size: 20px;
-}
-
-footer td {
-    width: 150px;
-}
-
-footer a {
-    color: #319df6;
-}
-
-footer a:hover {
-    color: #fff;
-}
-
-.copyright {
-    height: 80px;
-}
 /*
-@media screen and (min-width: 1400px) {
-    footer {
-        padding-left: 18%;
+@media (max-width: 768px) {
+    #home {
+        padding-top: 8%;
+    }
+    
+    #about {
+        background: #fff;
+        color: #000;
     }
 }
 */
+
+@media (max-width: 768px) {
+    #home {
+        padding-top: 7vh;
+    }
+    
+    #home h1 {
+        font-size: 30px;
+    }
+    
+    #home p {
+        font-size: 20px;
+    }
+    
+    .view-all-button {
+        font-size: 24px;
+        width: 160px;
+        padding: 5px;
+    }
+    
+    .view-all-button:hover span {
+        padding-right: 18px;
+    }
+    
+    .main-container {
+        width: 86vw;
+        padding: 2% 3%;
+    }
+    
+    .main-container h1 {
+        font-size: 28px;
+    }
+    
+    .podcast {
+        width: 24.85vw;
+        margin: 1%;
+    }
+    
+    .podcast-cover {
+        width: 25vw;
+    }
+    
+    .podcast-name {
+        font-size: 3vw;
+    }
+    
+    .podcast-author {
+        font-size: 3vw;
+    }
+    
+    #popular-button {
+        font-size: 20px;
+        width: 200px;
+        padding: 5px;
+        margin-top: 2%;
+    }
+    
+    #popular-button:hover span {
+        padding-right: 16px;
+    }
+
+    .complete-podcast {
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .single-podcast, .episode-container {
+        flex-wrap: nowrap;
+        width: 85%;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 2%;
+        padding-bottom: 0;
+    }
+    
+    .episode-container {
+        padding: 3%;
+    }
+
+    .episode-table {
+        margin: 0;
+        width: 100%;
+    }
+
+    .episode-table td, th {
+        font-size: 15px;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: #444;
+    color: #fff;
+    min-height: 150px;
+    padding: 20px 10px;
+}
+
+footer h4 {
+    margin-bottom: 4px;
+}
+
+footer .nav > li > a {
+    padding: 0px;
+    color: #319df6;
+}
+
+footer .nav >li > a:hover {
+    background: none;
+    color: #fff;
+}
+
+footer .text-right {
+    margin-right: 50px;
+    margin-top: -15px;
+}
+
 /* 404 PAGE */
 .error-container {
-    margin-top: 50px;
+    margin-top: 120px;
     text-align: center;
 }
 
 .error-container h2 {
     margin: 10px 0;
     font-size: 96px;
-    font-weight: 100;
 }
 
 .error-container h3 {
     margin: 10px 0;
     font-size: 36px;
-    font-weight: 400;
 }

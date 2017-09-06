@@ -1,15 +1,37 @@
 <header>
-    <a href="/"><h1 class="site-title"><i class="fa fa-podcast"></i> QTPod</h1></a>
 
-<nav class="navbar">
-    <ul class="navlist">
-        <li class="navitem navlink active"><a href="/home">Home</a></li>
-        <li class="navitem navlink"><a href="/podcasts/popular">Popular</a></li>
-        <li class="navitem navbar-search">
-            <input type="text" id="navbar-search-input" placeholder="Find a podcast...">
-            <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
-        </li>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+        <a href="#home" class="navbar-brand" id="navbar-brand"><i class="fa fa-podcast"></i> QTPod</a>
+    </div>
+    
+<div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/browse">Browse</a></li>
     </ul>
-</nav>  
-  
+    
+    <div class="navbar-form navbar-right">
+        <div class="input-group">
+            <input type="text" id="navbar-search-input" class="form-control" placeholder="Find a podcast...">
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-default" id="navbar-search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</div>
+</nav>
+
 </header>

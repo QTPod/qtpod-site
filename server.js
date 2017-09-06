@@ -45,12 +45,17 @@ app.get("/home", function(req, res)
     });
 });
 
-app.get("/podcasts/popular", function(req, res)
+app.get("/browse", function(req, res)
+{
+    res.redirect("/browse/popular");
+});
+
+app.get("/browse/popular", function(req, res)
 {
     Pod.find({}).exec(function(err, data)
     {
         if(err) return next(err);
-        res.render("popular", {allPodcasts: data});	
+        res.render("browse", {allPodcasts: data, sort: "Popular"});
     });
 });
 
