@@ -20,4 +20,10 @@ $(document).ready(function(){
 
     });
 
+    $('[data-toggle="popover"]').popover();
+    
+    $('#email-btn').click(function() {
+        alert('Oops, something bad happened. Please shoot us an email instead.')
+    });
+    
 });

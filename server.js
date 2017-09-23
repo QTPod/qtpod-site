@@ -32,7 +32,21 @@ app.get("/", function(req, res)
 });
 
 app.get("/home", function(req, res)
-{   
+{
+/*
+var data = Pod.findOne({urlname: "thedaily"}).exec(function(err, data) 
+{
+    if(err) return next(err); 
+    data.episodes = ["Tuesday, Sep 5, 2017", "Bonus: Senator Jeff Flake Interview", "Thursday, Aug 31, 2017", "Wednesday, Aug 30, 2017", "Tuesday, Aug 29, 2017", "Monday, Aug 28, 2017", "Friday, Aug. 25, 2017", "Thursday, Aug. 24, 2017", "Wednesday, Aug. 23, 2017", "Tuesday, Aug. 22, 2017", "Monday, Aug. 21, 2017", "Special Edition: The Fall of Steve Bannon", "Friday, Aug. 18, 2017", "Thursday, Aug. 17, 2017", "Wednesday, Aug. 16, 2017", "Tuesday, Aug. 15, 2017", "Monday, Aug. 14, 2017"]; 
+    data.save(function(err){}); 
+}); 
+*/
+
+    res.render("home");
+});
+
+app.get("/about", function(req, res)
+{
     Pod.find({}).exec(function(err, data)
     {
         if(err) return next(err);
@@ -41,16 +55,21 @@ app.get("/home", function(req, res)
         {
             allPodcasts: data.slice(0, 6)
         };
-        res.render("home", tempData);
+        res.render("about", tempData);
     });
 });
 
-app.get("/podcasts/popular", function(req, res)
+app.get("/browse", function(req, res)
+{
+    res.redirect("/browse/popular");
+});
+
+app.get("/browse/popular", function(req, res)
 {
     Pod.find({}).exec(function(err, data)
     {
         if(err) return next(err);
-        res.render("popular", {allPodcasts: data});	
+        res.render("browse", {allPodcasts: data, sort: "Popular"});
     });
 });
 

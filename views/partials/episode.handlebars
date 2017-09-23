@@ -1,5 +1,10 @@
 <tr class="episode">
-    <td>{{this}}</td>
+    <td class="name-cell">
+        {{this}}
+        <button type="button" title="Description" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="DESCRIPTION HERE" class="episode-description"> 
+            <i class="fa fa-info-circle"></i>
+        </button>
+    </td>
     <td class="release-date-cell">8/10/17</td>
     <td class="play-button-cell"><i class="fa fa-play-circle play-button"></i></td>
 </tr>
